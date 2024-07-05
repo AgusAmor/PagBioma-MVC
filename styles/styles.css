@@ -1,0 +1,439 @@
+/* GENERAL */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #73a3ad;
+    color: #fdf8df;
+}
+
+ul, nav{
+    list-style: none;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a{
+    color: #fdf8df;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffd202;
+}
+
+button{
+    background-color: #fdf8df;
+    padding: 15px;
+    border: 1;
+    border-style: hidden;
+    border-radius: 30px;
+    color: #719DA5;
+}
+
+button:hover{
+    background-color:  #719DA5 ;
+    color: #fdf8df;
+    border-style: solid;
+    border-color: #fdf8df;
+}
+/*/
+
+
+/* HEADER */
+header{
+    top: 0;
+    background-color: #719DA5;
+    display: grid;
+    padding: 40px 20px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+header nav{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#login{
+    display: grid;
+    font-size: 1rem;
+    justify-content: center;
+    position: absolute;
+    padding: 10px;
+}
+/*/
+
+
+/* LOGIN */
+.btn{
+    background-color: #fdf8df;
+    padding: 5px;
+    border-radius: 30px;
+    color: #719DA5;
+}
+
+.btn:hover{
+    background-color:  #719DA5 ;
+    color: #fdf8df;
+}
+
+#problema{
+    display: grid;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+#problema .btn{
+    margin: auto;
+}
+/*/
+
+
+/* INDEX */
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+#botones{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.seccion img{
+    width: 250px;
+    border-radius: 20px;
+}
+
+.seccion{
+    justify-content: center;
+    height: 250PX;
+}
+
+#cat{
+    display: flex;
+    margin: auto;
+}
+
+#cat div{
+    text-align: start;
+    margin: auto 30px;
+    gap: 10px;
+    width: 50%;
+}
+
+#log{
+    display: flex;
+    margin: auto;
+}
+
+#log div{
+    text-align: end;
+    margin: auto 30px;
+    gap: 10px;
+    width: 50%;
+}
+/*/
+
+
+/* CATALOGO */
+.catalogo{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.second{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.catalogo img{
+    width: 250px;
+    border-radius: 20px;
+}
+/*/
+
+
+/* BOLSON */
+#infoBolson{
+    justify-content: center;
+    display: grid;
+    gap: 30px;
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+}
+
+label strong{
+    color:#ffd202;
+}
+
+form{
+    margin: 40px auto;
+    width: 80%;
+}
+
+fieldset{
+    width: 50%;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    background-color: #719DA5;
+    border-radius: 20px;
+    border: 0;
+}
+
+fieldset legend{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#nombApell{
+    display: flex;
+    gap: 20px;
+}
+
+input{
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fdf8df;
+    border: 0;
+    color: #719DA5;
+}
+
+input:focus{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border-radius: 2px;
+}
+
+.enviarBtn{
+    background-color: #fdf8df;
+    padding: 10px;
+    border-radius: 30px;
+    color: #73a3ad;
+    float: inline-end;
+}
+
+.enviarBtn:hover{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border: 1;
+    border-style: solid;
+    border-color: #fdf8df;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fdf8df;
+    border: 0;
+    color: #719DA5;
+}
+
+textarea:focus{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border-radius: 2px;
+}
+
+.mail{
+    margin: 20px auto;
+    display: grid;
+    justify-content: center;
+}
+
+.mail h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.cardGracias{
+    text-align: center;
+    padding: 30px;
+    display: grid;
+    gap: 20px;
+    width: 50%;
+    margin: auto;
+    background-color: #fdf8df;
+    color: #73a3ad ;
+    border-radius: 20px;
+    border: 0;
+}
+/*/
+
+
+/* NOSOTROS */
+#nosotros{
+    text-align: center;
+    margin-top: 20px;
+}
+/*/
+
+/* FOOTER */
+footer{
+    bottom: 0;
+    margin-top: 100px;
+    background-color: #719DA5;
+    display: grid;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+footer div a{
+    font-size: 1.5rem;
+}
+/*/
+
+
+/* ADMIN */
+/* index */
+#nav-indexA{
+    text-align: center;
+}
+
+#nav-indexA ul li a:hover{
+    color: #ffd202;
+}
+
+/* general */
+#admin{
+    background-color: #fdf8df;
+    color: #719DA5;
+}
+
+#admin header {
+    background-color: #ffd202;
+}
+
+#admin footer {
+    background-color: #ffd202;
+}
+
+#admin a {
+    color: #719DA5;
+}
+
+#admin a:hover {
+    color: #fdf8df;
+}
+
+/* tabla */
+#admin table{
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #fdf8df;
+    border: 1;
+    border-style: solid;
+    border-color: #73a3ad;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#admin table a:hover{
+    color: #ffd202;
+}
+
+#admin table td{
+    padding: 5px;
+}
+
+#admin table a{
+    border-radius: 10px;
+    padding: 2px;
+    border: 1;
+    border-style: solid;
+    border-color: #73a3ad;
+}
+
+#admin table img{
+    width: 30px;
+    height: auto;
+}
+
+/* form */
+#admin fieldset{
+    background-color: #fdf8df;
+    border: #719DA5;
+    border-style: solid;
+}
+
+#admin div div{
+    display: flex;
+    gap: 30px;
+}
+
+#admin input{
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #719DA5;
+    border: 0;
+    color: #fdf8df;
+}
+
+#admin input:focus{
+    background-color: #719DA5;
+    color: #ffd202;
+    border-radius: 2px;
+}
+
+input#pic{
+    background-color: #fdf8df;
+    color: #719DA5;
+}
+
+#select{
+    display: flex;
+}
+
+select{
+    background-color: #719DA5;
+    color: #fdf8df;
+    border: 0;
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+#admin .enviarBtn{
+    margin: auto;
+    padding: 8px;
+}
+
+#admin .enviarBtn:hover{
+    color: #ffd202;
+    background-color: #fdf8df;
+    border: #719DA5;
+    border-style: solid;
+}
+
+/* modProd */
+#imgProducto img{
+    width: 30px;
+    border-radius: 20px;
+}
+/*/
