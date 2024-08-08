@@ -16,9 +16,16 @@
                         <a href=/web-app/signup>Registrarse</a>
                         ";
                     }
+
+                    if(isset($_SESSION['carrito'])){
+                        $carrito = count($_SESSION['carrito']);
+                    }else{
+                        $carrito = "";
+                    }
                     ?>
                 </div>
                 <a href="/web-app/"><img src="img/logo.png" alt="logo"/></a>
+                <button id="btnCarrito"><?php echo $carrito; ?><i class="bi bi-cart-fill"></i></button>
             </div>
         <nav>
             <a href="/web-app/">Inicio</a>

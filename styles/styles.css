@@ -44,6 +44,75 @@ button:hover{
     border-style: solid;
     border-color: #fdf8df;
 }
+
+/*form*/
+form{
+    margin: 40px auto;
+    width: 80%;
+}
+
+fieldset{
+    width: 50%;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    background-color: #719DA5;
+    border-radius: 20px;
+    border: 0;
+}
+
+fieldset legend{
+    text-align: center;
+    font-size: 2rem;
+}
+
+input{
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fdf8df;
+    border-style: hidden;
+    color: #719DA5;
+}
+
+input:focus{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border-radius: 2px;
+}
+
+.enviarBtn{
+    background-color: #fdf8df;
+    padding: 10px;
+    border-radius: 30px;
+    color: #73a3ad;
+    float: inline-end;
+}
+
+.enviarBtn:hover{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border: 1;
+    border-style: solid;
+    border-color: #fdf8df;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fdf8df;
+    border: 0;
+    color: #719DA5;
+}
+
+textarea:focus{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border-radius: 2px;
+}
 /*/
 
 
@@ -71,6 +140,23 @@ header nav{
     justify-content: center;
     position: absolute;
     padding: 10px;
+}
+
+#btnCarrito{
+    font-size: 1rem;
+    background-color: inherit;
+    color: white;
+    border-style: none;
+    position: absolute;
+    margin-left: 500px;
+}
+
+#btnCarrito:hover{
+    color: #ffd202;
+}
+
+#btnCarrito i{
+    font-size: 1.5rem;
 }
 /*/
 
@@ -168,6 +254,86 @@ header nav{
     width: 250px;
     border-radius: 20px;
 }
+
+#formAgregarCarrito{
+    margin: 10px auto;
+}
+
+.btnAgregarCarrito{
+    width: 130px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.btnAgregarCarrito:hover{
+    background-color:  #719DA5 ;
+    color: #fdf8df;
+    border-style: solid;
+    border-color: #fdf8df;
+}
+
+#formAgregarCarrito div input{
+    width: 50px;
+}
+
+#modalCarrito{
+    display: grid;
+    justify-content: center;
+    background-color: #73a3ad;
+    border-radius: 10px;
+    border-style: solid;
+    /* display: none; */
+    position: fixed;
+    width: 50%;
+    top: 0;
+    margin: 150px 25%;
+}
+
+#modalCarrito td{
+    border: solid;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+#modalCarrito input{
+    width: 55px;
+}
+
+#modalCarrito div{
+    display: flex;
+    gap: 7px;
+    margin: 10px;
+    justify-content: center;
+}
+
+#btnCerrarModal{
+    position: absolute;
+    float: right;
+    right: 0;
+    color: #fdf8df;
+    background-color: inherit;
+    font-size: 1.5rem;
+}
+
+#btnCerrarModal:hover{
+    color: #ffd202;
+    border-style: none;
+}
+
+.botoneraCarrito a{
+    background-color: #fdf8df;
+    color: #73a3ad;
+    border-style: solid;
+    border-color: #719DA5;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.botoneraCarrito a:hover{
+    background-color: #73a3ad;
+    color: #fdf8df;
+    border-color: #fdf8df;
+}
 /*/
 
 
@@ -185,77 +351,9 @@ label strong{
     color:#ffd202;
 }
 
-form{
-    margin: 40px auto;
-    width: 80%;
-}
-
-fieldset{
-    width: 50%;
-    display: grid;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-    margin: auto;
-    background-color: #719DA5;
-    border-radius: 20px;
-    border: 0;
-}
-
-fieldset legend{
-    text-align: center;
-    font-size: 2rem;
-}
-
 #nombApell{
     display: flex;
     gap: 20px;
-}
-
-input{
-    border-radius: 20px;
-    padding: 5px;
-    background-color: #fdf8df;
-    border: 0;
-    color: #719DA5;
-}
-
-input:focus{
-    background-color:  #73a3ad ;
-    color: #fdf8df;
-    border-radius: 2px;
-}
-
-.enviarBtn{
-    background-color: #fdf8df;
-    padding: 10px;
-    border-radius: 30px;
-    color: #73a3ad;
-    float: inline-end;
-}
-
-.enviarBtn:hover{
-    background-color:  #73a3ad ;
-    color: #fdf8df;
-    border: 1;
-    border-style: solid;
-    border-color: #fdf8df;
-}
-
-textarea{
-    width: 100%;
-    resize: none;
-    border-radius: 20px;
-    padding: 5px;
-    background-color: #fdf8df;
-    border: 0;
-    color: #719DA5;
-}
-
-textarea:focus{
-    background-color:  #73a3ad ;
-    color: #fdf8df;
-    border-radius: 2px;
 }
 
 .mail{
@@ -290,6 +388,54 @@ textarea:focus{
     margin-top: 20px;
 }
 /*/
+
+
+/* CARRITO */
+#carrito{
+    text-align: center;
+}
+
+#carrito table{
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #73a3ad;
+    border-style: solid;
+    border-color: #fdf8df;
+    margin: 10px auto;
+}
+
+#carrito table tr{
+    padding: 10px;
+}
+
+#carrito td{
+    border: solid;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+#carrito input{
+    width: 55px;
+}
+
+#carrito div{
+    display: flex;
+    gap: 7px;
+    margin: 10px;
+    justify-content: center;
+}
+
+
+#carrito p a{
+    color: #ffd202;
+}
+
+#carrito p a:hover{
+    color: #fdf8df;
+}
+
+/*/
+
 
 /* FOOTER */
 footer{
