@@ -128,7 +128,7 @@ header{
 
 header div{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     width: 100%;
 }
@@ -153,23 +153,79 @@ header #logo{
     font-size: 1rem;
     position: absolute;
     padding: 10px;
-    gap: 5px;
     width: auto;
 }
 
-#btnCarrito{
+#btn_abirModal{
     font-size: 1rem;
     background-color: inherit;
     color: #fdf8df;
     border-style: none;
+    background-color: rgb(0, 0, 0, 0);
 }
 
-#btnCarrito:hover{
+#btn_abirModal:hover{
     color: #ffd202;
 }
 
-#btnCarrito i{
+#btn_abirModal i{
     font-size: 1.5rem;
+}
+
+#modalCarrito{
+    display: grid;
+    justify-content: center;
+    background-color: #73a3ad;
+    border-radius: 10px;
+    border-style: solid;
+    position: fixed;
+    width: 50%;
+    top: 0;
+    margin: 150px 25%;
+    display: none;
+    padding: 20px;
+}
+
+#modalCarrito td{
+    border: solid;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+#modalCarrito input{
+    width: 55px;
+}
+
+#modalCarrito div{
+    display: flex;
+    gap: 7px;
+    margin: 10px;
+    justify-content: center;
+}
+
+#modalCarrito p a{
+    color: #ffd202;
+}
+
+#modalCarrito p a:hover{
+    color: #fdf8df;
+}
+
+#btn_cerrarModal{
+    position: absolute;
+    float: right;
+    right: 0;
+    color: #fdf8df;
+    background-color: inherit;
+    font-size: 1.5rem;
+    background-color: rgb(0, 0, 0, 0);
+    width: auto;
+    padding: 0px;
+}
+
+#btn_cerrarModal:hover{
+    color: #ffd202;
+    border-style: none;
 }
 /*/
 
@@ -288,65 +344,6 @@ header #logo{
 #formAgregarCarrito div input{
     width: 50px;
 }
-
-#modalCarrito{
-    display: grid;
-    justify-content: center;
-    background-color: #73a3ad;
-    border-radius: 10px;
-    border-style: solid;
-    display: none;
-    position: fixed;
-    width: 50%;
-    top: 0;
-    margin: 150px 25%;
-}
-
-#modalCarrito td{
-    border: solid;
-    border-radius: 20px;
-    padding: 2px;
-}
-
-#modalCarrito input{
-    width: 55px;
-}
-
-#modalCarrito div{
-    display: flex;
-    gap: 7px;
-    margin: 10px;
-    justify-content: center;
-}
-
-#btnCerrarModal{
-    position: absolute;
-    float: right;
-    right: 0;
-    color: #fdf8df;
-    background-color: inherit;
-    font-size: 1.5rem;
-}
-
-#btnCerrarModal:hover{
-    color: #ffd202;
-    border-style: none;
-}
-
-.botoneraCarrito a{
-    background-color: #fdf8df;
-    color: #73a3ad;
-    border-style: solid;
-    border-color: #719DA5;
-    padding: 5px;
-    border-radius: 30px;
-}
-
-.botoneraCarrito a:hover{
-    background-color: #73a3ad;
-    color: #fdf8df;
-    border-color: #fdf8df;
-}
 /*/
 
 
@@ -405,26 +402,23 @@ label strong{
 
 /* CARRITO */
 #carrito{
+    border-radius: 30px;
+    border-style: solid;
+    border-color: #fdf8df;
+    padding-bottom: 20px;
     text-align: center;
+    width: 50%;
+    display: grid;
+    margin: auto;
 }
 
 #carrito table{
-    border-radius: 10px;
-    padding: 8px;
-    background-color: #73a3ad;
-    border-style: solid;
-    border-color: #fdf8df;
-    margin: 10px auto;
-}
-
-#carrito table tr{
+    text-align: center;
     padding: 10px;
 }
 
-#carrito td{
-    border: solid;
-    border-radius: 20px;
-    padding: 2px;
+#carrito table tr{
+    border-style: solid;
 }
 
 #carrito input{
@@ -438,15 +432,39 @@ label strong{
     justify-content: center;
 }
 
-
-#carrito p a{
+#carrito strong{
     color: #ffd202;
+    border-radius: 30px;
+    border-style: solid;
+    padding: 6px;
+    border-color: #fdf8df;
 }
 
-#carrito p a:hover{
+#carrito th{
+    color: #ffd202;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+#carrito td{
+    border-bottom: solid;
+    padding: 2px;
+}
+
+.botoneraCarrito a{
+    background-color: #fdf8df;
+    color: #73a3ad;
+    border-style: solid;
+    border-color: #719DA5;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.botoneraCarrito a:hover{
+    background-color: #73a3ad;
     color: #fdf8df;
+    border-color: #fdf8df;
 }
-
 /*/
 
 

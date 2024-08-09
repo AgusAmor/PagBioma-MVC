@@ -34,29 +34,28 @@
                 $carrito = "";
             }
 
-            echo "<button id=btnCarrito >$carrito<i class='bi bi-cart-fill'></i></button>";
+            echo "<button id=btn_abirModal >$carrito<i class='bi bi-cart-fill'></i></button>";
         ?>
     </div>
-        
+    <div id="modalCarrito">
         <?php
-                    $consulta = "SELECT * FROM producto";
-                    $resultado = mysqli_query($con, $consulta);
-                    $totalFinal = 0;
-					echo "
-                    <div id=modalCarrito>
-                    <h3>Carrito</h3>
-                    <button id=btnCerrarModal ><i class='bi bi-x'></i></button>
-                        <table>
-                            <tr>
-                                <th>Producto</th>
-                                <th>Tipo</th>
-                                <th>Cantidad</th>
-                                <th>Precio unitario</th>
-                                <th>Precio final</th>
-                            </tr>
-
-                    ";
+                    
 					if(isset($_SESSION['carrito'])){
+                        $consulta = "SELECT * FROM producto";
+                        $resultado = mysqli_query($con, $consulta);
+                        $totalFinal = 0;
+                        echo "
+                        
+                        <h3>Carrito</h3>
+                        <button id=btn_cerrarModal ><i class='bi bi-x'></i></button>
+                            <table>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Tipo</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio unitario</th>
+                                    <th>Precio final</th>
+                                </tr>";
 						foreach ($_SESSION['carrito'] as $id => $fila) {
 							echo "
 								<tr>
@@ -81,9 +80,8 @@
                                 </tr>
 							";
                             $totalFinal += $fila['precio_final'];
-						}	
-					}
-                    echo "
+                        }
+                        echo "
                             </table>
                             <div>                               
                                 <p>Total a pagar: </p>
@@ -96,5 +94,13 @@
                             </div>
                         </div>
                     ";
+					}else{
+                        echo "<button id=btn_cerrarModal ><i class='bi bi-x'></i></button>
+                        <p>Aún no se agregó nada al carrito. Visitá nuestro 
+                        <a href=/web-app/catalogo >catálogo</a>
+                         para ver nuestros productos.</p>
+                        </div>";
+                    }
+                    
             ?>
     </header>

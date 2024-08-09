@@ -2,19 +2,42 @@ var btn_bolson = document.getElementById('btn_bolson');
 var btn_login = document.getElementById('btn_login');
 var btn_signup = document.getElementById('btn_signup');
 var btn_catalogo = document.getElementById('btn_catalogo');
+var btn_cerrarModal = document.getElementById('btn_cerrarModal');
+var btn_abirModal = document.getElementById('btn_abirModal');
+var modalCarrito = document.getElementById('modalCarrito');
 
-btn_bolson.onclick = function(){
-    window.location.href = "/web-app/bolson";
+if (btn_bolson) {
+    btn_bolson.onclick = function() {
+        window.location.href = "/web-app/bolson";
+    };
 }
 
-btn_login.onclick = function(){
-    window.location.href = '/web-app/login';
+if (btn_login) {
+    btn_login.onclick = function() {
+        window.location.href = '/web-app/login';
+    };
 }
 
-btn_signup.onclick = function(){
-    window.location.href = '/web-app/signup';
+if (btn_signup) {
+    btn_signup.onclick = function() {
+        window.location.href = '/web-app/signup';
+    };
 }
 
-btn_catalogo.onclick = function(){
-    window.location.href = '/web-app/catalogo';
-}   
+if (btn_catalogo) {
+    btn_catalogo.onclick = function() {
+        window.location.href = '/web-app/catalogo';
+    };
+}
+
+if (btn_abirModal) {
+    btn_abirModal.onclick = function() {
+        modalCarrito.style.display = "grid";
+    };
+}
+
+if (btn_cerrarModal) {
+    btn_cerrarModal.onclick = function() {
+        modalCarrito.style.display = "none";
+    };
+}
