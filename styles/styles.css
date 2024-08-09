@@ -126,6 +126,13 @@ header{
     padding-bottom: 10px;
 }
 
+header div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 header nav{
     display: flex;
     gap: 20px;
@@ -134,21 +141,27 @@ header nav{
     margin-top: 30px;
 }
 
+header #logo{
+    margin-left: 25%;
+    width: 50%;
+    justify-content: center;
+    display: grid;
+}
+
 #login{
     display: grid;
     font-size: 1rem;
-    justify-content: center;
     position: absolute;
     padding: 10px;
+    gap: 5px;
+    width: auto;
 }
 
 #btnCarrito{
     font-size: 1rem;
     background-color: inherit;
-    color: white;
+    color: #fdf8df;
     border-style: none;
-    position: absolute;
-    margin-left: 500px;
 }
 
 #btnCarrito:hover{
@@ -282,7 +295,7 @@ header nav{
     background-color: #73a3ad;
     border-radius: 10px;
     border-style: solid;
-    /* display: none; */
+    display: none;
     position: fixed;
     width: 50%;
     top: 0;

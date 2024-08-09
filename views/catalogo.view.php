@@ -16,62 +16,6 @@
                     $consulta = "SELECT * FROM producto";
                     $resultado = mysqli_query($con, $consulta);
                     $totalFinal = 0;
-					echo "
-                    <div id=modalCarrito>
-                    <h3>Carrito</h3>
-                    <button id=btnCerrarModal ><i class='bi bi-x'></i></button>
-                        <table>
-                            <tr>
-                                <th>Producto</th>
-                                <th>Tipo</th>
-                                <th>Cantidad</th>
-                                <th>Precio unitario</th>
-                                <th>Precio final</th>
-                            </tr>
-
-                    ";
-					if(isset($_SESSION['carrito'])){
-						foreach ($_SESSION['carrito'] as $id => $fila) {
-							echo "
-								<tr>
-                                    <td>
-                                        $fila[nombre]
-                                    </td>
-                                    <td>
-                                        $fila[tipo]
-                                    </td>
-                                    <td>
-                                        <input type=number min=0 step=0.1 value=$fila[cantidad]>
-                                    </td>
-                                    <td>
-                                        $$fila[precio]
-                                    </td>
-                                    <td>
-                                        $$fila[precio_final]
-                                    </td>
-                                    <td>
-                                        <a href=/web-app/eliminarDelCarrito?id=$id >Eliminar</a>
-                                    </td>
-                                </tr>
-							";
-                            $totalFinal += $fila['precio_final'];
-						}	
-					}
-                    echo "
-                            </table>
-                            <div>                               
-                                <p>Total a pagar: </p>
-                                <p>$$totalFinal</p>
-                            </div>
-                            <div class=botoneraCarrito>
-                                <a href=# >Actualizar</a>
-                                <a href=/web-app/vaciarCarrito >Vaciar carrito</a>
-                                <a href=/web-app/carrito >Finalizar compra</a>
-                            </div>
-                        </div>
-                    ";
-
-
 
                     $contador = 0;
                     echo "<div class=second>";
