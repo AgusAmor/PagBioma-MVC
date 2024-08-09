@@ -10,7 +10,7 @@ if (isset($_SESSION['carrito'][$id])) {
 }
 
 
-header ("Location: /web-app/catalogo");
+header ("Location: " .$_SERVER['HTTP_REFERER']."");
 
 ?>
 

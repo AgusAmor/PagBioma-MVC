@@ -63,7 +63,7 @@ if (isset($_GET['nom']) && isset($_GET['apell']) && isset($_GET['mail'])
         echo "
             <div class=cardGracias>
             <h2>¡Gracias por tu pedido!</h2>
-            <p>En caso de teer alguna consulta acerca del bolsón no dudes en escribirnos.</p>
+            <p>En caso de tener alguna consulta acerca del bolsón no dudes en escribirnos.</p>
             </div>
         ";
         
@@ -73,9 +73,6 @@ if (isset($_GET['nom']) && isset($_GET['apell']) && isset($_GET['mail'])
         // } else {
         //     echo "Error al enviar el correo. Por favor, inténtalo de nuevo.";
         // }
-
-
-
         }
 
 ?>

@@ -12,8 +12,7 @@ $routes = [
     '/web-app/vaciarCarrito' => 'controllers/vaciarCarrito.php',
     '/web-app/carrito' => 'controllers/carrito.php',
     '/web-app/eliminarDelCarrito' => 'controllers/eliminarDelCarrito.php',
-
-    
+    '/web-app/enviarPedido' => 'controllers/enviarPedido.php',
     '/web-app/bolson' => 'controllers/bolson.php',
     '/web-app/bolsonEnvios' => 'controllers/bolsonEnvios.php',
     '/web-app/bolsonEnviado' => 'controllers/bolsonEnviado.php',

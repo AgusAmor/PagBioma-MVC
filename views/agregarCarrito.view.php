@@ -29,9 +29,6 @@ if (isset($_POST['id_producto']) && isset($_POST['cantidad']) && isset($_POST['n
     }
 }
 
-
-
-
 header ("Location: /web-app/catalogo")
 
 ?>

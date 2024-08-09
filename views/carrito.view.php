@@ -35,7 +35,7 @@
                         $fila[tipo]
                     </td>
                     <td>
-                        <input type=number min=0 step=0.1 value=$fila[cantidad]>
+                        $fila[cantidad]
                     </td>
                     <td>
                         $$fila[precio]
@@ -56,9 +56,8 @@
                     <p><strong>$$totalFinal</strong></p>
                 </div> 
                 <div class=botoneraCarrito>
-                    <a href=# >Actualizar</a>
                     <a href=/web-app/vaciarCarrito >Vaciar carrito</a>
-                    <a href=# >Finalizar compra</a>
+                    <a href=/web-app/enviarPedido >Realizar pedido</a>
                 </div>
             </div>";
         }else{

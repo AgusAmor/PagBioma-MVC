@@ -7,6 +7,6 @@ if(isset($_SESSION['carrito'])){
     unset($_SESSION['carrito']);
 }
 
-header ("Location: /web-app/catalogo")
+header ("Location: " .$_SERVER['HTTP_REFERER']."");
 
 ?>

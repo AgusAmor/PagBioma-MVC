@@ -37,70 +37,72 @@
             echo "<button id=btn_abirModal >$carrito<i class='bi bi-cart-fill'></i></button>";
         ?>
     </div>
-    <div id="modalCarrito">
-        <?php
-                    
-					if(isset($_SESSION['carrito'])){
-                        $consulta = "SELECT * FROM producto";
-                        $resultado = mysqli_query($con, $consulta);
-                        $totalFinal = 0;
-                        echo "
+    <div id="modal-container">
+        <div id="modalCarrito">
+            <?php
                         
-                        <h3>Carrito</h3>
-                        <button id=btn_cerrarModal ><i class='bi bi-x'></i></button>
-                            <table>
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Tipo</th>
-                                    <th>Cantidad</th>
-                                    <th>Precio unitario</th>
-                                    <th>Precio final</th>
-                                </tr>";
-						foreach ($_SESSION['carrito'] as $id => $fila) {
-							echo "
-								<tr>
-                                    <td>
-                                        $fila[nombre]
-                                    </td>
-                                    <td>
-                                        $fila[tipo]
-                                    </td>
-                                    <td>
-                                        <input type=number min=0 step=0.1 value=$fila[cantidad]>
-                                    </td>
-                                    <td>
-                                        $$fila[precio]
-                                    </td>
-                                    <td>
-                                        $$fila[precio_final]
-                                    </td>
-                                    <td>
-                                        <a href=/web-app/eliminarDelCarrito?id=$id >Eliminar</a>
-                                    </td>
-                                </tr>
-							";
-                            $totalFinal += $fila['precio_final'];
+                        if(isset($_SESSION['carrito'])){
+                            $consulta = "SELECT * FROM producto";
+                            $resultado = mysqli_query($con, $consulta);
+                            $totalFinal = 0;
+                            echo "
+                            
+                            <h2>Carrito</h2>
+                            <hr>
+                            <button id=btn_cerrarModal ><i class='bi bi-x'></i></button>
+                                <table>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Tipo</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio unitario</th>
+                                        <th>Precio final</th>
+                                    </tr>";
+                            foreach ($_SESSION['carrito'] as $id => $fila) {
+                                echo "
+                                    <tr>
+                                        <td>
+                                            $fila[nombre]
+                                        </td>
+                                        <td>
+                                            $fila[tipo]
+                                        </td>
+                                        <td>
+                                            $fila[cantidad]
+                                        </td>
+                                        <td>
+                                            $$fila[precio]
+                                        </td>
+                                        <td>
+                                            $$fila[precio_final]
+                                        </td>
+                                        <td>
+                                            <a href=/web-app/eliminarDelCarrito?id=$id >Eliminar</a>
+                                        </td>
+                                    </tr>
+                                ";
+                                $totalFinal += $fila['precio_final'];
+                            }
+                            echo "
+                                </table>
+                                <div>                               
+                                    <p>Total a pagar: </p>
+                                    <p><strong>$$totalFinal</strong></p>
+                                </div>
+                                <div class=botoneraCarrito>
+                                    <a href=/web-app/vaciarCarrito >Vaciar carrito</a>
+                                    <a href=/web-app/carrito >Realizar pedido</a>
+                                </div>
+                            </div>
+                        ";
+                        }else{
+                            echo "<button id=btn_cerrarModal ><i class='bi bi-x'></i></button>
+                            <p>Aún no se agregó nada al carrito. Visitá nuestro 
+                            <a href=/web-app/catalogo >catálogo</a>
+                            para ver nuestros productos.</p>
+                            </div>";
                         }
-                        echo "
-                            </table>
-                            <div>                               
-                                <p>Total a pagar: </p>
-                                <p>$$totalFinal</p>
-                            </div>
-                            <div class=botoneraCarrito>
-                                <a href=# >Actualizar</a>
-                                <a href=/web-app/vaciarCarrito >Vaciar carrito</a>
-                                <a href=/web-app/carrito >Finalizar compra</a>
-                            </div>
-                        </div>
-                    ";
-					}else{
-                        echo "<button id=btn_cerrarModal ><i class='bi bi-x'></i></button>
-                        <p>Aún no se agregó nada al carrito. Visitá nuestro 
-                        <a href=/web-app/catalogo >catálogo</a>
-                         para ver nuestros productos.</p>
-                        </div>";
-                    }
-                    
-            ?>
+                        
+                ?>
+                </div>
     </header>
